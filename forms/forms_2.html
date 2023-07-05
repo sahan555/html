@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h3>Billing address -blue nile</h3>
+    <ul>
+      <li>Please enter a valid zip code for your region</li>
+    </ul>
+    <form>
+      <table width="650">
+        <tr>
+          <td width="70%">would you like to create account?</td>
+          <td width="30%">
+            <input type="radio" name="account_radio" id="acc_yes" />
+            <label for="acc_yes">yes</label>
+            <input type="radio" name="account_radio" id="acc_no" />
+            <label for="acc_no">no</label>
+          </td>
+        </tr>
+      </table>
+      <br />
+      <table width="650" border="0">
+        <tr>
+          <td width="25%" align="right">
+            <label for="firstname">*Firstname</label>
+          </td>
+          <td width="25%">
+            <input type="text" name="firstname" placeholder="Ram" required />
+          </td>
+          <td width="25%" align="right">
+            <label for="address">address</label>
+          </td>
+          <td width="25%">
+            <input name="address" type="text" placeholder="address" />
+          </td>
+        </tr>
+        <tr>
+          <td align="right">
+            <label for="lastname">*Last Name</label>
+          </td>
+          <td>
+            <input type="text" name="lastname" placeholder="Sht" required />
+          </td>
+          <td></td>
+          <td>
+            <input name="address" type="text" placeholder="address" />
+          </td>
+        </tr>
+        <tr>
+          <td align="right"><label for="company">company</label></td>
+          <td><input type="text" name="company" placeholder="" /></td>
+          <td align="right"><label for="city">*city</label></td>
+          <td><input type="text" name="city" placeholder="bkt" /></td>
+        </tr>
+        <tr>
+          <td align="right"><label for="phone">Phone</label></td>
+          <td>
+            <table>
+              <tr>
+                <td>
+                    <input
+                    type="number"
+                    name="phone"
+                    placeholder="94465656654"
+                  /><br />
+                  <em>phone number</em>
+                </td>
+              <td>
+                <input
+                  type="text"
+                  name="phone"
+                  size="2"
+                /><br />
+                <em>ext</em>
+              </td>
+              <td>
+                <a href="#">Inti. number?</a>
+              </td>
+            </tr>
+            </table>
+          </td>
+          <td align="right"><label for="state">*state</label></td>
+          <td>
+            <select name="state" id="state">
+              <option value="bkt">bkt</option>
+              <option value="Ktm">Ktm</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td align="right"><label for="email">*email</label></td>
+          <td>
+            <input type="email" name="email" placeholder="ramsht@gmail.com" />
+          </td>
+          <td align="right"><label for="zip">*zip</label></td>
+          <td><input type="text" name="zip" placeholder="847654" /></td>
+        </tr>
+        <tr>
+          <td align="right"><label for="email">*Re-type email</label></td>
+          <td>
+            <input type="email" name="email" placeholder="ramsht@gmail.com" />
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            Enter an address where we can send an email confirming your order
+          </td>
+          <td align="right"><label>*Address type</label></td>
+          <td>
+            <input type="radio" name="address_radio" id="address_home" />
+            <label for="address_home">Home</label>
+            <input type="radio" name="address_radio" id="address_Business" />
+            <label for="address_Business">Business</label>
+          </td>
+        </tr>
+      </table>
+      <table width="650">
+        <tr>
+          <td width="70%">Are you shipping to this billing address?</td>
+          <td width="30%">
+            <input type="radio" name="bill_radio" id="bill_yes" />
+            <label for="bill_yes">yes</label>
+            <input type="radio" name="bill_radio" id="bill_no" />
+            <label for="bill_no">no</label>
+          </td>
+        </tr>
+      </table>
+     
+    </form>
+  </body>
+</html>

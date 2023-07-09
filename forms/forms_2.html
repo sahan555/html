@@ -15,124 +15,181 @@
       <a href="../index.html#rule">Rules</a>
     </nav>
   </header>
+  <style>
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .flex label {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+      flex: 0 0 30%;
+      max-width: 30%;
+      display: inline;
+      text-align: right;
+      margin-right: 10px;
+      text-transform: capitalize;
+    }
+
+    .width-50>div>input,
+
+    .width-50>div>span {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 65%;
+      flex: 0 0 65%;
+      max-width: 65%;
+    }
+
+    .width-50>div>select {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 67%;
+      flex: 0 0 67%;
+      max-width: 67%;
+    }
+
+    .flex span>input:not(:only-of-type) {
+      width: 100%;
+    }
+
+    .width-50 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .width-50>div {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+  </style>
   <div>
-    <h3>Billing address -blue nile</h3>
-    <ul>
+    <h2 style="color: #007cff;
+    font-weight: 100;
+    margin-bottom: 0;">Billing Adress - Blue Nile</h2>
+    <ul style="color: red;
+    padding-left: 15px;
+    font-weight: bold;">
       <li>Please enter a valid zip code for your region</li>
     </ul>
-    <form>
-      <table width="650">
-        <tr>
-          <td width="70%">would you like to create account?</td>
-          <td width="30%">
-            <input type="radio" name="account_radio" id="acc_yes" />
-            <label for="acc_yes">yes</label>
-            <input type="radio" name="account_radio" id="acc_no" />
-            <label for="acc_no">no</label>
-          </td>
-        </tr>
-      </table>
-      <br />
-      <table width="650" border="0">
-        <tr>
-          <td width="25%" align="right">
+    <form action="#" style="width: 800px;">
+      <div style="background-color:#d6e8f7;padding: 13px; margin-bottom: 15px;">
+        <label><b>would you like to create account?</b></label>
+        <span style="float: right;">
+          <input type="radio" name="account_radio" id="acc_yes" />
+          <label for="acc_yes">yes</label>
+          <input type="radio" name="account_radio" id="acc_no" />
+          <label for="acc_no">no</label>
+        </span>
+        <div style="clear: both;"></div>
+
+      </div>
+      <div class="flex">
+        <div class="width-50">
+          <div>
             <label for="firstname">*Firstname</label>
-          </td>
-          <td width="25%">
             <input type="text" name="firstname" placeholder="Ram" required />
-          </td>
-          <td width="25%" align="right">
-            <label for="address">address</label>
-          </td>
-          <td width="25%">
-            <input name="address" type="text" placeholder="address" />
-          </td>
-        </tr>
-        <tr>
-          <td align="right">should we use sass
+          </div>
+
+          <div>
             <label for="lastname">*Last Name</label>
-          </td>
-          <td>
             <input type="text" name="lastname" placeholder="Sht" required />
-          </td>
-          <td></td>
-          <td>
-            <input name="address" type="text" placeholder="address" />
-          </td>
-        </tr>
-        <tr>
-          <td align="right"><label for="company">company</label></td>
-          <td><input type="text" name="company" placeholder="" /></td>
-          <td align="right"><label for="city">*city</label></td>
-          <td><input type="text" name="city" placeholder="bkt" /></td>
-        </tr>
-        <tr>
-          <td align="right"><label for="phone">Phone</label></td>
-          <td>
-            <table>
-              <tr>
-                <td>
-                  <input type="number" name="phone" placeholder="94465656654" /><br />
-                  <em>phone number</em>
-                </td>
-                <td>
-                  <input type="text" name="phone" size="2" /><br />
-                  <em>ext</em>
-                </td>
-                <td>
-                  <a href="#">Inti. number?</a>
-                </td>
-              </tr>
-            </table>
-          </td>
-          <td align="right"><label for="state">*state</label></td>
-          <td>
+          </div>
+          <div>
+            <label for="company">company</label>
+            <input type="text" name="company" placeholder="" />
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <div style="    display: flex;
+            flex-wrap: nowrap;
+            width: 65%;">
+              <span>
+                <input type="number" name="phone" placeholder="94465656654"
+                  style="width: 133px;margin-right: 10px;" /><br />
+                <em>phone number</em>
+              </span>
+              <span>
+                <input type="text" name="phone" size="2" style="margin-right: 10px;" /><br />
+                <em>ext</em>
+              </span>
+              <span>
+                <a href="#">Inti. number?</a>
+              </span>
+            </div>
+          </div>
+          <div>
+            <label for="email">*email</label>
+            <input type="email" name="email" placeholder="ramsht@gmail.com" />
+          </div>
+          <div>
+            <label for="email">*Re-type email</label>
+            <span>
+              <input type="email" name="email" placeholder="ramsht@gmail.com" style="width: 100%;" />
+              <br>
+              <i>Enter an address where we can send an email confirming your order
+              </i>
+            </span>
+          </div>
+        </div>
+        <div class="width-50">
+          <div>
+            <label for="address">address</label>
+            <span style="width: 70%;">
+              <input name="address" type="text" placeholder="address" style="margin-bottom: 12px;" />
+
+              <input name="address" type="text" placeholder="address" />
+            </span>
+          </div>
+          <div>
+            <label for="city">*city</label>
+            <input type="text" name="city" placeholder="bkt" />
+          </div>
+          <div>
+            <label for="state">*state</label>
             <select name="state" id="state">
               <option value="bkt">bkt</option>
               <option value="Ktm">Ktm</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td align="right"><label for="email">*email</label></td>
-          <td>
-            <input type="email" name="email" placeholder="ramsht@gmail.com" />
-          </td>
-          <td align="right"><label for="zip">*zip</label></td>
-          <td><input type="text" name="zip" placeholder="847654" /></td>
-        </tr>
-        <tr>
-          <td align="right"><label for="email">*Re-type email</label></td>
-          <td>
-            <input type="email" name="email" placeholder="ramsht@gmail.com" />
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>
-            Enter an address where we can send an email confirming your order
-          </td>
-          <td align="right"><label>*Address type</label></td>
-          <td>
-            <input type="radio" name="address_radio" id="address_home" />
-            <label for="address_home">Home</label>
-            <input type="radio" name="address_radio" id="address_Business" />
-            <label for="address_Business">Business</label>
-          </td>
-        </tr>
-      </table>
-      <table width="650">
-        <tr>
-          <td width="70%">Are you shipping to this billing address?</td>
-          <td width="30%">
-            <input type="radio" name="bill_radio" id="bill_yes" />
-            <label for="bill_yes">yes</label>
-            <input type="radio" name="bill_radio" id="bill_no" />
-            <label for="bill_no">no</label>
-          </td>
-        </tr>
-      </table>
+          </div>
+          <div>
+            <label for="zip">*zip</label>
+            <input type="text" name="zip" placeholder="847654" />
+          </div>
+          <div>
+            <label for="country">*country</label>
+            <select name="country" id="country">
+              <option value="nepal">Nepal</option>
+              <option value="india">India</option>
+            </select>
+          </div>
+          <div>
+            <label>*Address type</label>
+            <div>
+              <input type="radio" name="address_radio" id="address_home" />
+              <label for="address_home">Home</label>
+              <input type="radio" name="address_radio" id="address_Business" />
+              <label for="address_Business">Business</label>
+            </div>
 
+          </div>
+        </div>
+      </div>
+      <div style="padding: 14px;">
+        <label><b>Are you shipping to this billing address?</b></label>
+        <span style="
+        margin-left: 50px;">
+          <input type="radio" name="bill_radio" id="bill_yes" />
+          <label for="bill_yes">yes</label>
+          <input type="radio" name="bill_radio" id="bill_no" />
+          <label for="bill_no">no</label>
+        </span>
+      </div>
     </form>
-  </body>
+  </div>
+  <div><a href="forms_2_table.html">yehi form table bata</a></div>
+</body>
+
 </html>

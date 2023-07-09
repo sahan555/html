@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <header>
+        <nav>
+          <a href="../index.html">Home</a> | <a href="../about.html">About</a> |
+          <a href="../contact.html">Contact</a> | <a href="../faq.html">Faq</a> |
+          <a href="../index.html#rule">Rules</a> 
+        </nav>
+      </header>
+    <form>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <div>
+                <label>Salution</label>
+                <br />
+                <select>
+                    <option disabled selected>--none--</option>
+                    <option value="">hello</option>
+                    <option value="">hello</option>
+                </select>
+            </div><br />
+            <div>
+                <label for="Firstname">First name:</label>
+                <input type="text" name="Firstname"/>
+            </div> <br /> 
+            <div>
+                <label for="lastname">Last name:</label>
+                <input type="text" name="Lastname"/>
+            </div> <br />
+            <div>
+                <label for="Gender">Gender:</label>
+                <input type="radio" name="gender" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">Female</label>
+            </div> <br />
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email"/>
+            </div><br />
+            <div>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" name="dob"/>
+            </div><br />
+            <div>
+                <label for="address">Address:</label><br />
+                <textarea rows="3" name="address"></textarea>
+            </div><br />
+            <div>
+                <input type="submit">
+            </div>
+        </fieldset>
+    
+    </form>
+</body>
+</html>

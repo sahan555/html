@@ -1,20 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forms</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="../index.html">Home</a> | <a href="../about.html">About</a> |
-        <a href="../contact.html">Contact</a> | <a href="../faq.html">Faq</a> |
-        <a href="../index.html#rule">Rules</a> 
-      </nav>
-    </header>
-    <h3>Billing address -blue nile</h3>
-    <ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forms</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a> | <a href="../about.html">About</a> |
+      <a href="../contact.html">Contact</a> | <a href="../faq.html">Faq</a> |
+      <a href="../index.html#rule">Rules</a>
+    </nav>
+  </header>
+  <style>
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .flex label {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+      flex: 0 0 30%;
+      max-width: 30%;
+      display: inline;
+      text-align: right;
+      margin-right: 10px;
+      text-transform: capitalize;
+    }
+
+    .width-50>div>input,
+
+    .width-50>div>span {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 65%;
+      flex: 0 0 65%;
+      max-width: 65%;
+    }
+
+    .width-50>div>select {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 67%;
+      flex: 0 0 67%;
+      max-width: 67%;
+    }
+
+    .flex span>input:not(:only-of-type) {
+      width: 100%;
+    }
+
+    .width-50 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .width-50>div {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+  </style>
+  <div>
+    <h2 style="color: #007cff;
+    font-weight: 100;
+    margin-bottom: 0;">Billing Adress - Blue Nile</h2>
+    <ul style="color: red;
+    padding-left: 15px;
+    font-weight: bold;">
       <li>Please enter a valid zip code for your region</li>
     </ul>
     <form action="#" style="width: 800px;">
@@ -39,47 +96,59 @@
           <div>
             <label for="lastname">*Last Name</label>
             <input type="text" name="lastname" placeholder="Sht" required />
-          </td>
-          <td></td>
-          <td>
-            <input name="address" type="text" placeholder="address" />
-          </td>
-        </tr>
-        <tr>
-          <td align="right"><label for="company">company</label></td>
-          <td><input type="text" name="company" placeholder="" /></td>
-          <td align="right"><label for="city">*city</label></td>
-          <td><input type="text" name="city" placeholder="bkt" /></td>
-        </tr>
-        <tr>
-          <td align="right"><label for="phone">Phone</label></td>
-          <td>
-            <table>
-              <tr>
-                <td>
-                    <input
-                    type="number"
-                    name="phone"
-                    placeholder="94465656654"
-                  /><br />
-                  <em>phone number</em>
-                </td>
-              <td>
-                <input
-                  type="text"
-                  name="phone"
-                  size="2"
-                /><br />
+          </div>
+          <div>
+            <label for="company">company</label>
+            <input type="text" name="company" placeholder="" />
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <div style="    display: flex;
+            flex-wrap: nowrap;
+            width: 65%;">
+              <span>
+                <input type="number" name="phone" placeholder="94465656654"
+                  style="width: 133px;margin-right: 10px;" /><br />
+                <em>phone number</em>
+              </span>
+              <span>
+                <input type="text" name="phone" size="2" style="margin-right: 10px;" /><br />
                 <em>ext</em>
-              </td>
-              <td>
+              </span>
+              <span>
                 <a href="#">Inti. number?</a>
-              </td>
-            </tr>
-            </table>
-          </td>
-          <td align="right"><label for="state">*state</label></td>
-          <td>
+              </span>
+            </div>
+          </div>
+          <div>
+            <label for="email">*email</label>
+            <input type="email" name="email" placeholder="ramsht@gmail.com" />
+          </div>
+          <div>
+            <label for="email">*Re-type email</label>
+            <span>
+              <input type="email" name="email" placeholder="ramsht@gmail.com" style="width: 100%;" />
+              <br>
+              <i>Enter an address where we can send an email confirming your order
+              </i>
+            </span>
+          </div>
+        </div>
+        <div class="width-50">
+          <div>
+            <label for="address">address</label>
+            <span style="width: 70%;">
+              <input name="address" type="text" placeholder="address" style="margin-bottom: 12px;" />
+
+              <input name="address" type="text" placeholder="address" />
+            </span>
+          </div>
+          <div>
+            <label for="city">*city</label>
+            <input type="text" name="city" placeholder="bkt" />
+          </div>
+          <div>
+            <label for="state">*state</label>
             <select name="state" id="state">
               <option value="bkt">bkt</option>
               <option value="Ktm">Ktm</option>
@@ -119,10 +188,8 @@
         </span>
       </div>
     </form>
-    <div>
-      <form>
-        
-      </form>
-    </div>
-  </body>
+  </div>
+  <div><a href="forms_2_table.html">yehi form table bata</a></div>
+</body>
+
 </html>

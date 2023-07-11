@@ -1,157 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forms</title>
-    <link rel="stylesheet" href="../assets/css/style.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="../index.html">Home</a> | <a href="../about.html">About</a> |
-        <a href="../contact.html">Contact</a> | <a href="../faq.html">Faq</a> |
-        <a href="../index.html#rule">Rules</a>
-      </nav>
-    </header>
-    <form>
-      <div class="bg-grey">
-        <select>
-          <option>Record</option>
-          <option>Record</option>
-          <option>Record</option>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forms</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a> | <a href="../about.html">About</a> |
+      <a href="../contact.html">Contact</a> | <a href="../faq.html">Faq</a> |
+      <a href="../index.html#rule">Rules</a>
+    </nav>
+  </header>
+  <form class="bigform">
+    <div class="bg-grey">
+      <select class="custom-select">
+        <option>Record</option>
+        <option>Record</option>
+        <option>Record</option>
+      </select>
+      <div class="small-font">
+        <span>View:</span>
+        <select class="bold">
+          <option>Review Orders</option>
+          <option>Review Orders</option>
+          <option>Review Orders</option>
         </select>
+      </div>
+    </div>
+    <div class="btn-wrapper">
+      <div>
+        <span><a href="#">&#8679;</a></span>
+        <span><a href="#">&#8681;</a></span>
+        <span>* - indicates a required field</span>
+      </div>
+      <div>
+        <button type="button">ok</button>
+        <button type="button">delete</button>
+        <button type="button">cancel</button>
+      </div>
+    </div>
+    <div class="padding">
+      <div class="column form-wala">
         <div>
-          <span>View:</span>
-          <select>
-            <option><b>Review Orders</b></option>
-            <option><b>Review Orders</b></option>
-            <option><b>Review Orders</b></option>
+          <div>
+            <label class="icon" for=""><b>Customer:</b></label>
+            <input type="text" name="" placeholder="Ram" size="5" />
+          </div>
+          <div>
+            <label class="icon" for=""><b>Employee:</b></label>
+            <input type="text" name="" placeholder="Ramshreee" size="5" />
+          </div>
+          <div>
+            <label for="order_date"><b>Order Date:</b></label>
+            <input type="date" name="order_date" required />
+          </div>
+          <div>
+            <label for="required_date"><b>Required Date:</b></label>
+            <input type="date" name="required_date" placeholder="" required />
+          </div>
+          <div>
+            <label for="shipping_date"><b>Shipping Date:</b></label>
+            <input type="date" name="shipping_date" placeholder="" required />
+          </div>
+        </div>
+        <div style="text-align: right">
+          <div>
+            <label for=""><b>Address:</b></label>
+            <input type="text" name="" placeholder="12,asdsadsad" required />
+          </div>
+          <div>
+            <label for=""><b>City:</b></label>
+            <input type="text" name="" placeholder="Ktm" required />
+          </div>
+          <div>
+            <label for=""><b>Region:</b></label>
+            <input type="text" name="" placeholder="" required />
+          </div>
+          <div>
+            <label for=""><b>Postal Code:</b></label>
+            <input type="number" name="" placeholder="13080" required />
+          </div>
+          <div>
+            <label for=""><b>Ship Country:</b></label>
+            <input type="text" name="" placeholder="France" required />
+          </div>
+        </div>
+      </div>
+      <div class="table">
+        <div class="table-bar">
+          <span class="bottom-icon">&#9722;</span>
+          <span class="search-icon">
+            <input type="text" />
+          </span>
+          <a href="#!">New order Details</a>
+          <select class="custom-select">
+            <option>action</option>
+            <option>action</option>
+            <option>action</option>
           </select>
         </div>
+        <table>
+          <tr>
+            <th>Product Name</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Discount</th>
+            <th>Product Category Name</th>
+            <th>Product supplier Company Name</th>
+            <th>Extended Price</th>
+          </tr>
+          <tr>
+            <td>Grandma's tea Seeds</td>
+            <td>$25.00</td>
+            <td>20</td>
+            <td>25%</td>
+            <td>Condiments</td>
+            <td>Grandma</td>
+            <td>$375.00</td>
+          </tr>
+          <tr>
+            <td>Grandma's tea Seeds</td>
+            <td>$25.00</td>
+            <td>20</td>
+            <td>25%</td>
+            <td>Condiments</td>
+            <td>Grandma</td>
+            <td>$375.00</td>
+          </tr>
+          <tr>
+            <td>Grandma's tea Seeds</td>
+            <td>$25.00</td>
+            <td>20</td>
+            <td>25%</td>
+            <td>Condiments</td>
+            <td>Grandma</td>
+            <td>$375.00</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Avg:$19.00</td>
+            <td>Sum :60</td>
+            <td>Avg:30%</td>
+            <td colspan="3" align="right">Sum:$752.25</td>
+          </tr>
+        </table>
       </div>
-      <div class="btn-wrapper">
-        <div>
-          <span><a href="#">&#8679;</a></span>
-          <span><a href="#">&#8681;</a></span>
-          <span>* - indicates a required field</span>
-        </div>
-        <div>
-          <button type="button">ok</button>
-          <button type="button">delete</button>
-          <button type="button">cancel</button>
-        </div>
-      </div>
-      <div class="padding">
-        <div class="column form-wala">
+      <div class="column">
+        <div class="input-wrapper">
           <div>
-            <div>
-              <label class="icon" for=""><b>Customer:</b></label>
-              <input type="text" name="" placeholder="Ram" size="5" />
-            </div>
-            <div>
-              <label class="icon" for=""><b>Employee:</b></label>
-              <input type="text" name="" placeholder="Ramshreee" size="5" />
-            </div>
-            <div>
-              <label for="order_date"><b>Order Date:</b></label>
-              <input type="date" name="order_date" required />
-            </div>
-            <div>
-              <label for="required_date"><b>Required Date:</b></label>
-              <input type="date" name="required_date" placeholder="" required />
-            </div>
-            <div>
-              <label for="shipping_date"><b>Shipping Date:</b></label>
-              <input type="date" name="shipping_date" placeholder="" required />
-            </div>
+            <label for="ship_name">Ship Name</label>
+            <input type="text" name="ship_name" placeholder="Bon app'">
           </div>
-          <div style="text-align: right">
-            <div>
-              <label for=""><b>Address:</b></label>
-              <input type="text" name="" placeholder="12,asdsadsad" required />
-            </div>
-            <div>
-              <label for=""><b>City:</b></label>
-              <input type="text" name="" placeholder="Ktm" required />
-            </div>
-            <div>
-              <label for=""><b>Region:</b></label>
-              <input type="text" name="" placeholder="" required />
-            </div>
-            <div>
-              <label for=""><b>Postal Code:</b></label>
-              <input type="number" name="" placeholder="13080" required />
-            </div>
-            <div>
-              <label for=""><b>Ship Country:</b></label>
-              <input type="text" name="" placeholder="France" required />
-            </div>
-          </div>
-        </div>
-        <div class="table">
-          <div class="table-bar">
-            <span class="bottom-icon"></span>
-            <span class="search icon">
-              <input type="text" />
-            </span>
-            <a href="#!">New order Details</a>
+          <div>
+            <label for="ship_via">Ship Via:</label>
             <select>
-              <option>action</option>
-              <option>action</option>
-              <option>action</option>
+              <option>United packages</option>
+              <option>United packages</option>
+              <option>United packages</option>
             </select>
           </div>
-          <table>
-            <tr>
-              <th>Product Name</th>
-              <th>Unit Price</th>
-              <th>Quantity</th>
-              <th>Discount</th>
-              <th>Product Category Name</th>
-              <th>Product supplier Company Name</th>
-              <th>Extended Price</th>
-            </tr>
-            <tr>
-              <td>Grandma's tea Seeds</td>
-              <td>$25.00</td>
-              <td>20</td>
-              <td>25%</td>
-              <td>Condiments</td>
-              <td>Grandma</td>
-              <td>$375.00</td>
-            </tr>
-            <tr>
-              <td>Grandma's tea Seeds</td>
-              <td>$25.00</td>
-              <td>20</td>
-              <td>25%</td>
-              <td>Condiments</td>
-              <td>Grandma</td>
-              <td>$375.00</td>
-            </tr>
-            <tr>
-              <td>Grandma's tea Seeds</td>
-              <td>$25.00</td>
-              <td>20</td>
-              <td>25%</td>
-              <td>Condiments</td>
-              <td>Grandma</td>
-              <td>$375.00</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Avg:$19.00</td>
-                <td>Sum :60</td>
-                <td>Avg:30%</td>
-                <td colspan="3" align="right">Sum:$752.25</td>
-            </tr>
-          </table>
         </div>
-        <div class="column">
-
-        </div>
+        <ul>
+          <li><b>SubTotal:</b>$798.54</li>
+          <li><b>Freight:</b><input type="number" placeholder="$50" size="2"></li>
+          <li><b>Total:</b>$900</li>
+        </ul>
       </div>
-    </form>
-  </body>
+    </div>
+    <div class="btn-wrapper">
+      <div>
+        <span><a href="#">&#8679;</a></span>
+        <span><a href="#">&#8681;</a></span>
+        <span>* - indicates a required field</span>
+      </div>
+      <div>
+        <button type="button">ok</button>
+        <button type="button">delete</button>
+        <button type="button">cancel</button>
+      </div>
+    </div>
+  </form>
+</body>
+
 </html>

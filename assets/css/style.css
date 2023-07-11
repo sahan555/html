@@ -1,12 +1,15 @@
-.bg-grey{
-    background-color: #fbfbfb;
+body {
+  padding: 0;
+  margin: 0;
+}
+.bg-grey {
+  background-color: #fbfbfb;
 }
 .flex {
   display: flex;
   flex-wrap: wrap;
 }
-.flex label
-{
+.flex label {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 30%;
   flex: 0 0 30%;
@@ -17,23 +20,22 @@
   text-transform: capitalize;
 }
 
-.width-50>div>input,
-
-.width-50>div>span {
+.width-50 > div > input,
+.width-50 > div > span {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 65%;
   flex: 0 0 65%;
   max-width: 65%;
 }
 
-.width-50>div>select {
+.width-50 > div > select {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 67%;
   flex: 0 0 67%;
   max-width: 67%;
 }
 
-.flex span>input:not(:only-of-type) {
+.flex span > input:not(:only-of-type) {
   width: 100%;
 }
 
@@ -44,41 +46,258 @@
   max-width: 50%;
 }
 
-.width-50>div {
+.width-50 > div {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 12px;
 }
 .column {
-    column-count: 2;
+  column-count: 2;
 }
-.form-wala {
-    width: 700px;
+.form-wala div:nth-child(2) input {
+  text-align: right;
 }
-.form-wala label{
-width: 100px;
-text-align: left;
-display: inline-block;
-vertical-align: top;
+.form-wala label {
+  width: 90px;
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+}
+.form-wala .icon {
+  position: relative;
+}
+.form-wala .icon::after {
+  content: "\1F6F8";
+  font-size: 19px;
+  position: absolute;
+  bottom: -6px;
+  right: -106px;
 }
 .form-wala > div > div {
-    margin-bottom: 14px;
+  margin-bottom: 12px;
 }
-input[type="date"]{
-    position: relative;
-overflow: visible;
-}
-input[type="date"]::-webkit-calendar-picker-indicator {
-    color: rgba(0, 0, 0, 0);
-    opacity: 1;
-    display: block;
-    background-repeat:  no-repeat;
-    width: 25px;
-    height: 25px;
-    border-width: thin
-    
+input[type="date"] {
+  position: relative;
+  overflow: visible;
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
-    position: absolute;
-    left: 100%;
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  border-width: thin;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 102%;
+}
+.bigform {
+  padding: 20px;
+  box-shadow: 1px 1px 5px rgb(0 0 0 / 36%);
+  width: 700px;
+  margin: 50px auto 0;
+}
+.bigform .bg-grey {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* align-content: center; */
+  flex-wrap: wrap;
+  border: 1px solid #aaa;
+  padding: 5px 10px;
+}
+.custom-select {
+  background: none;
+  border: 0;
+}
+.custom-select:focus {
+  outline: none;
+}
+.small-font {
+  font-size: 12px;
+}
+.bold {
+  font-weight: 600;
+}
+.btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* align-content: center; */
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+.btn-wrapper a {
+  text-decoration: none;
+}
+.btn-wrapper button {
+  width: 70px;
+}
+.btn-wrapper span:nth-child(2) {
+  padding: 0 5px;
+}
+.padding {
+  padding: 10px 20px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.table {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+.table .table-bar {
+  border: 1px solid #aaa;
+  padding: 3px 2px;
+  background: #f5f5f5;
+}
+.table .bottom-icon {
+  transform: rotateZ(315deg);
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: #ddd;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1;
+  border: 1px solid #ccc;
+  font-size: 13px;
+}
+.table .search-icon {
+  position: relative;
+  display: inline-block;
+}
+.table .search-icon::after {
+  position: absolute;
+  content: "\1F50D";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+.table a {
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+  position: relative;
+  margin-right: 10px;
+  padding-left: 30px;
+  margin-left: 20px;
+}
+.table a::before {
+  content: "\1F6F8";
+  font-size: 19px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+.table table {
+  
+  border-collapse: collapse;
+}
+.table th {
+  color: #597fff;
+  font-size: 13px;
+  font-weight: 100;
+  text-align: left;
+  padding: 10px 10px 10px 4px;
+}
+.table td {
+  font-size: 13px;
+  font-weight: 100;
+  color: #333;
+  padding: 10px 10px 10px 4px;
+}
+.table tr:last-child td {
+  border-top: 1px dotted #ddd;
+  padding: 5px;
+}
+.bigform .input-wrapper {
+  padding-top: 30px;
+}
+.bigform .input-wrapper >div {
+  margin-bottom: 12px;
+}
+.bigform .input-wrapper label {
+  width: 90px;
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  font-weight: 600;
+}
+.bigform ul {
+  list-style: none;
+  text-align: right;    padding-top: 10px;
+  margin-bottom: 0;
+}
+.bigform ul li:not(:last-child) {
+  margin-bottom: 12px;
+}
+.bigform ul li b {
+    width: 100px;
+    display: inline-block;
+    margin-right: auto;
+    text-align: left;
+}
+.bigform ul input {
+  width: 40px;
+}
+/* Sagar sir ko page ko css */
+.contact {
+  background: #bb2bbb;
+  color: #fff;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding: 40px 0;
+}
+.contact h2 {
+  margin-top: 0;
+}
+.contact p {
+  width: 300px;
+  margin: auto auto 35px;
+  line-height: 1.4;
+}
+.contact a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  background: #f145f1;
+  border-radius: 10px;
+  border: 1px solid #c42fc4;
+  transition: 0.5s all ease;
+}
+.contact a:hover {
+  background-color: #fff;
+  color: #f145f1;
+}
+.footer {
+  background: #620f62;
+  color: #fff;
+  text-align: center;
+  padding: 40px 0;
+}
+.footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.footer a {
+  text-decoration: none;
+  color: #f145f1;
+}
+.footer ul li {
+  font-size: 30px;
+}
+.footer ul li:not(:last-child) {
+margin-right:30px ;
+}
+.footer p {
+  font-size: 14px;
+  margin: 0;
 }
